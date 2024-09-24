@@ -56,7 +56,7 @@ myGoTemplate/
 ## 如何使用
 
 1. **克隆模板**：将该模板框架克隆到本地，或者根据该结构创建新的项目。
-2. **修改模块名称**：将 `myGoTemplate` 改为你的模块名称，并在 `go.mod` 中更新。
+2. **修改模块名称**：将 `myGoTemplate` 改为你的模块名称，并在 `go.mod` 中更新。或使用脚本 `shell/init.sh` 进行修改。
 3. **开发业务逻辑**：在 `internal/app1` 或 `internal/app2` 中编写具体的业务逻辑。
 4. **运行应用程序**：
    ```bash
