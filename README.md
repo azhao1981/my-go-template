@@ -56,7 +56,7 @@ myGoTemplate/
 ## 如何使用
 
 1. **克隆模板**：将该模板框架克隆到本地，或者根据该结构创建新的项目。
-2. **修改模块名称**：将 `your_project` 改为你的模块名称，并在 `go.mod` 中更新。
+2. **修改模块名称**：将 `myGoTemplate` 改为你的模块名称，并在 `go.mod` 中更新。
 3. **开发业务逻辑**：在 `internal/app1` 或 `internal/app2` 中编写具体的业务逻辑。
 4. **运行应用程序**：
    ```bash
@@ -64,11 +64,10 @@ myGoTemplate/
    ```
 5. **构建可执行文件**：
    ```bash
-   go build -o bin/app1 cmd/app1/main.go
+   make app1
+   make app2
    ```
 
-## 结语
+## ref
 
-以上就是一个遵循 Go 语言最佳实践的多应用模板框架。通过合理的目录结构和模块划分，可以让项目更加清晰、易于维护和扩展。同时，使用标准的 Go 工具链和模块管理，可以简化依赖管理和部署流程。
-
-希望这个模板能帮助你快速搭建 Go 项目，专注于业务逻辑的实现！
+https://github.com/songquanpeng/gin-template
