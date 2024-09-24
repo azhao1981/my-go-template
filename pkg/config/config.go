@@ -1,27 +1,34 @@
 package config
 
 import (
-	"os"
+	"github.com/spf13/viper"
 )
 
 type Config struct {
-	Port     string
-	LogLevel string
+	Port     int    `mapstructure:"port"`
+	Database string `mapstructure:"database"`
 }
 
+var cfg *Config
+
 func LoadConfig() (*Config, error) {
-	port := os.Getenv("APP_PORT")
-	if port == "" {
-		port = "8080"
+	viper.SetConfigName("config")
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath(".")
+
+	if err := viper.ReadInConfig(); err != nil {
+		return nil, err
 	}
 
-	logLevel := os.Getenv("LOG_LEVEL")
-	if logLevel == "" {
-		logLevel = "info"
+	config := Config{}
+	if err := viper.Unmarshal(&config); err != nil {
+		return nil, err
 	}
 
-	return &Config{
-		Port:     port,
-		LogLevel: logLevel,
-	}, nil
+	cfg = &config
+	return cfg, nil
+}
+
+func GetConfig() *Config {
+	return cfg
 }

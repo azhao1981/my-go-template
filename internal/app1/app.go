@@ -5,6 +5,7 @@ import (
 	"myGoTemplate/pkg/config"
 	"myGoTemplate/pkg/logger"
 	"net/http"
+	"strconv"
 )
 
 func Run(cfg *config.Config, logger *logger.Logger) error {
@@ -14,11 +15,11 @@ func Run(cfg *config.Config, logger *logger.Logger) error {
 
 	// 启动 HTTP 服务器
 	server := &http.Server{
-		Addr:    ":" + cfg.Port,
+		Addr:    ":" + strconv.Itoa(cfg.Port),
 		Handler: mux,
 	}
 
-	logger.Info("Starting app1 on port " + cfg.Port)
+	logger.Info("Starting app1 on port " + strconv.Itoa(cfg.Port))
 
 	return server.ListenAndServe()
 }

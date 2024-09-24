@@ -4,6 +4,7 @@ import (
 	"myGoTemplate/internal/app1"
 	"myGoTemplate/pkg/config"
 	"myGoTemplate/pkg/logger"
+	"os"
 )
 
 func main() {
@@ -14,7 +15,7 @@ func main() {
 	}
 
 	// 初始化日志
-	logger := logger.NewLogger(cfg.LogLevel)
+	logger := logger.NewLogger("info", os.Stdout)
 
 	// 启动应用程序
 	if err := app1.Run(cfg, logger); err != nil {
