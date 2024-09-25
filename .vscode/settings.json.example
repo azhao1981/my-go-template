@@ -1,0 +1,25 @@
+{
+    "go.toolsEnvVars": {
+        "LD_LIBRARY_PATH": "/usr/local/lib:${env:LD_LIBRARY_PATH}",
+        "CGO_ENABLED": "1"
+    },
+    // "terminal.integrated.env.linux": {
+    //     "LD_LIBRARY_PATH": "/usr/local/lib:${env:LD_LIBRARY_PATH}",
+    //     "CGO_ENABLED": "1",
+    // },
+    // "go.testEnvVars": {
+    //     "LD_LIBRARY_PATH": "/usr/local/lib:${env:LD_LIBRARY_PATH}",
+    //     "CGO_ENABLED": "1",
+    // },
+    "search.exclude": {
+        "**/logs": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true
+    },
+    // "go.goroot": "/usr/local/go",
+    // "go.gopath": "~/go/1.22.5",
+    "go.inferGopath": false,
+    "workbench.editor.wrapTabs": false,
+    "editor.wordWrap": "on",
+}

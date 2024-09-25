@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "formulahendry.code-runner",
+        "golang.go",
+        "doggy8088.go-extension-pack",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "ms-vscode-remote.remote-containers",
+        "mikestead.dotenv",
+        "ms-vscode-remote.remote-wsl",
+        "NoThlnG.vscode-open-wsl",
+    ]
+}
