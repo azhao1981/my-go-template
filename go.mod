@@ -1,6 +1,6 @@
 module myGoTemplate
 
-go 1.22
+go 1.24
 
 require (
 	github.com/mcuadros/go-defaults v1.2.0
