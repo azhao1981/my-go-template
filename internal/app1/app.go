@@ -2,13 +2,17 @@ package app1
 
 import (
 	"myGoTemplate/internal/app1/handler"
-	"myGoTemplate/pkg/config"
 	"myGoTemplate/pkg/logger"
 	"net/http"
 	"strconv"
 )
 
-func Run(cfg *config.Config, logger *logger.Logger) error {
+type Config struct {
+	Port   int
+	Logger *logger.Logger
+}
+
+func Run(cfg *Config, logger *logger.Logger) error {
 	// 设置路由和处理器
 	mux := http.NewServeMux()
 	mux.HandleFunc("/hello", handler.HelloHandler)
